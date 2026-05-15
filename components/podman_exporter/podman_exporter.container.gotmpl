@@ -1,0 +1,19 @@
+[Unit]
+Description=Podman prometheus exporter
+
+
+[Service]
+Restart=on-failure
+RestartSec=5s
+
+[Container]
+Image=quay.io/navidys/prometheus-podman-exporter:{{.containerTag}}
+ContainerName=podman_exporter
+Volume=/run/user/1000/podman/podman.sock:/run/podman/podman.sock
+Environment=CONTAINER_HOST=unix:///run/podman/podman.sock
+SecurityLabelDisable=true
+PublishPort={{.port}}:9882
+
+[Install]
+# Start by default on boot
+WantedBy=multi-user.target default.target

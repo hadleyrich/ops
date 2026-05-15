@@ -1,0 +1,7 @@
+[hosts]
+[hosts.sophie]
+roles = ["base"]
+
+[roles]
+[roles.base]
+components = ["podman_exporter"]
