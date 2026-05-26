@@ -1,6 +1,7 @@
 [hosts]
 [hosts.sophie]
 roles = ["base"]
+components = ["continuwuity"]
 
 [roles]
 [roles.base]
