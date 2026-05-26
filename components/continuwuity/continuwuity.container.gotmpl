@@ -1,0 +1,25 @@
+[Unit]
+Description=A community-driven Matrix homeserver
+
+[Service]
+Restart=on-failure
+RestartSec=5s
+
+[Container]
+Image=ghcr.io/continuwuity/continuwuity:{{.containerTag}}
+ContainerName=continuwuity
+Hostname=continuwuity
+Network=ingress
+Volume=/srv/podman/continuwuity/data:/data
+Environment=CONTINUWUITY_SERVER_NAME=matrix.nice.nz
+Environment=CONTINUWUITY_DATABASE_PATH=/data/
+Environment=CONTINUWUITY_ADDRESS=0.0.0.0
+Environment=CONTINUWUITY_PORT=8008
+Environment=CONTINUWUITY_WELL_KNOWN={ client=https://matrix.nice.nz, server=matrix.nice.nz:443 }
+Label=traefik.enable=true
+Label=traefik.http.routers.continuwuity.rule=Host(`matrix.nice.nz`)
+Label=traefik.http.services.continuwuity.loadbalancer.server.port=8008
+
+[Install]
+# Start by default on boot
+WantedBy=multi-user.target default.target

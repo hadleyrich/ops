@@ -1,0 +1,5 @@
+Defaults.containerTag = "v0.5.9"
+
+[[Services]]
+Service = "continuwuity.service"
+RestartedBy = ["continuwuity.container"]
