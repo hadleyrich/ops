@@ -8,7 +8,7 @@ RestartSec=5s
 [Container]
 Image=ghcr.io/continuwuity/continuwuity:{{.containerTag}}
 ContainerName=continuwuity
-Hostname=continuwuity
+HostName=continuwuity
 Network=ingress
 Volume=/srv/podman/continuwuity/data:/data
 Environment=CONTINUWUITY_SERVER_NAME=matrix.nice.nz
