@@ -1,5 +1,7 @@
 globals:
     cf_api_key: ENC[AES256_GCM,data:ZWt4lyLa/Qjzwrn+vmrSzRCWxIcWmd4oAs/ccljKO3RjIWvcAQ==,iv:v2mMtzxar+RxdcNM4X2hvIDakeNCCOXJvH0L81mXJM4=,tag:J86Mwr7iiNgZbzpRYX6jUA==,type:str]
+    oidc_plugin_secret: ENC[AES256_GCM,data:ckyhs1FmXY/rID2d8J83K8VFXlDDMGxrhBEDM6BHcgI=,iv:u8V3LguFz1cAWc/d011yujWcZxvciE7zn8MDaMba10g=,tag:F6dMYcOJvK6HusSSj1ihWQ==,type:str]
+    oidc_client_secret: ENC[AES256_GCM,data:3KFNwNJC24AFnfkBotYWZlU1RT4jq7pNlyg+bbhNALw=,iv:DstwY+bqGEqz8D3Lgq8t6beCs+4ocyhEXYT3IkzZWdw=,tag:TNL5HElvweq36wxHGeCDLQ==,type:str]
 roles:
     base:
         foo: ENC[AES256_GCM,data:Jw20,iv:053wBZDckiySo7AW3XhxHz1BC0xzVQcVcUXVg7OpVwE=,tag:QOOlDzh3Zp65D+7M1oPfWw==,type:str]
@@ -29,7 +31,7 @@ sops:
             wYpNUZKOi1k7fd/b4iAHHsKV2b5i7NJ9VYI/XnEvGW5/I0LZyB/Qrw==
             -----END AGE ENCRYPTED FILE-----
           recipient: age1af5h8gys22a7wets8uxt6nts2anye6esqgvvuw9zn5zjttn6sdqq062knr
-    lastmodified: "2026-06-15T09:24:39Z"
-    mac: ENC[AES256_GCM,data:4Y6+Z8817b7AZ58JLMB+CuiQXFivLOdAk/FzrxI4gFlsRXcWFZRaQ52sglYiVs8o7WxCmgmA5QAM1EDOpJQJ+zUI3nWevCsdlSBnw0nRvWTwVw4LYn8NnuuGNIE9OBzniOLx9kCV1qj5newOMy2rFeKOUpez/e0mkmoAD4zzCGc=,iv:LdKtVaYp0eXBBR62Ad06duc5U5MzZ9N82hy0iuegErY=,tag:B6BW1N9uqq5MU2Ml8g4Zew==,type:str]
+    lastmodified: "2026-06-15T10:13:24Z"
+    mac: ENC[AES256_GCM,data:SJ3HIjhEUEWrOzcDVmuD9Ds8+2OmRBKtVtn5UB6/nxu8u0Fa4eBR7npHcEqr7+SKxjvDoCv1/XYDz0id6bVHsNuh76JJgh/9CWAr3eSfYKeAYIb230bwaHvOyzVFHkWTdf0te05fdcHZxtS9HHbFRr8sg5Q8JMeqSv0BfzbdY1M=,iv:GAcWLQE7JggYgFVghTMBhRWMNdCAQRCSw45vQvIH9d0=,tag:n5tU6ImjIjmUPP0FeRnRKw==,type:str]
     unencrypted_suffix: _unencrypted
     version: 3.13.0
