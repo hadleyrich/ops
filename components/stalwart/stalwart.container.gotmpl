@@ -26,6 +26,8 @@ Label=traefik.tcp.routers.stalwart.rule=HostSNI(`*`)
 Label=traefik.tcp.routers.stalwart.entrypoints=https
 Label=traefik.tcp.routers.stalwart.tls.passthrough=true
 Label=traefik.tcp.services.stalwart.loadbalancer.server.port=443
+Label=traefik.http.routers.stalwart.rule=Host(`mail.nice.nz`)
+Label=traefik.http.services.stalwart.loadbalancer.server.port=443
 SecurityLabelDisable=true
 
 [Install]
