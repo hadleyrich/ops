@@ -4,4 +4,4 @@ roles = ["base"]
 
 [roles]
 [roles.base]
-components = ["podman_exporter", "continuwuity", "traefik"]
+components = ["podman_exporter", "continuwuity", "traefik", "stalwart"]

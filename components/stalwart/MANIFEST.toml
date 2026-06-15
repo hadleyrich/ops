@@ -1,0 +1,5 @@
+Defaults.containerTag = "v0.16.8"
+
+[[Services]]
+Service = "stalwart.service"
+RestartedBy = ["stalwart.container"]

@@ -1,0 +1,32 @@
+[Unit]
+Description=Stalwart mail server
+
+[Service]
+Restart=on-failure
+RestartSec=5s
+
+[Container]
+ContainerName=stalwart
+HostName=stalwart
+Image=docker.io/stalwartlabs/stalwart:{{.containerTag}}
+Environment=TZ=Pacific/Auckland
+Network=ingress
+Network=internal
+Network=egress
+PodmanArgs=--userns=keep-id --cap-add=NET_BIND_SERVICE
+PublishPort=25:25
+PublishPort=465:465
+PublishPort=587:587
+PublishPort=993:993
+PublishPort=8080:8080
+Volume=/srv/podman/stalwart/etc:/etc/stalwart
+Volume=/srv/podman/stalwart/log:/var/log/stalwart
+Label=traefik.enable=true
+Label=traefik.tcp.routers.stalwart.rule=HostSNI(`*`)
+Label=traefik.tcp.routers.stalwart.entrypoints=https
+Label=traefik.tcp.routers.stalwart.tls.passthrough=true
+Label=traefik.tcp.services.stalwart.loadbalancer.server.port=443
+SecurityLabelDisable=true
+
+[Install]
+WantedBy=multi-user.target default.target
