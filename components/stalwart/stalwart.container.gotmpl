@@ -10,10 +10,7 @@ ContainerName=stalwart
 HostName=stalwart
 Image=docker.io/stalwartlabs/stalwart:{{.containerTag}}
 Environment=TZ=Pacific/Auckland
-Network=ingress
-Network=internal
-Network=egress
-PodmanArgs=--userns=keep-id --cap-add=NET_BIND_SERVICE
+PodmanArgs=--network=ingress --network=internal --network=egress --userns=keep-id --cap-add=NET_BIND_SERVICE
 PublishPort=25:25
 PublishPort=465:465
 PublishPort=587:587
