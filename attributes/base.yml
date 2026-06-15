@@ -1,6 +1,14 @@
+globals:
+    cf_api_key: ENC[AES256_GCM,data:ZWt4lyLa/Qjzwrn+vmrSzRCWxIcWmd4oAs/ccljKO3RjIWvcAQ==,iv:v2mMtzxar+RxdcNM4X2hvIDakeNCCOXJvH0L81mXJM4=,tag:J86Mwr7iiNgZbzpRYX6jUA==,type:str]
+roles:
+    base:
+        foo: ENC[AES256_GCM,data:Jw20,iv:053wBZDckiySo7AW3XhxHz1BC0xzVQcVcUXVg7OpVwE=,tag:QOOlDzh3Zp65D+7M1oPfWw==,type:str]
 components:
     podman_exporter:
         port: ENC[AES256_GCM,data:sl+v4g==,iv:/hChZ3P6ifnvF3Xddk9PATdASzJypezm2IFMB2VluDU=,tag:AnlAHV0Lop5aQk1vCXz6GQ==,type:int]
+hosts:
+    sophie:
+        traefik_domain: ENC[AES256_GCM,data:FUNhTZFDt88Fcr3ddzs=,iv:5ZaCh7O6W8BESbhVOj5WxJTslCJcAxzXhLOkRYX4Xqo=,tag:D0a6ohynwF3tw9FW/gHwnQ==,type:str]
 sops:
     age:
         - enc: |
@@ -21,7 +29,7 @@ sops:
             wYpNUZKOi1k7fd/b4iAHHsKV2b5i7NJ9VYI/XnEvGW5/I0LZyB/Qrw==
             -----END AGE ENCRYPTED FILE-----
           recipient: age1af5h8gys22a7wets8uxt6nts2anye6esqgvvuw9zn5zjttn6sdqq062knr
-    lastmodified: "2026-05-15T10:10:46Z"
-    mac: ENC[AES256_GCM,data:2w27YxZbGGSvX6x5RSS5avtWdZPTZMmNwM2QeN1qPNmB8xzEX0mEoR8Ve19g0urxlX5R7DH7Vr/aZI3vKLSCIdgba8xAd/sBcaBvotxZ384ptv6TX0Bipw8Z+8GZACZReq3MZd7eUFchizGn8hHBoerllVVYP/N7imvRmvqVTkQ=,iv:eMHWOOcxeqkV7ihHERT90pXkJb44krkZjvFxCYV63T4=,tag:rl3T8Is3NX5ne8ujw3VTLw==,type:str]
+    lastmodified: "2026-06-15T09:24:39Z"
+    mac: ENC[AES256_GCM,data:4Y6+Z8817b7AZ58JLMB+CuiQXFivLOdAk/FzrxI4gFlsRXcWFZRaQ52sglYiVs8o7WxCmgmA5QAM1EDOpJQJ+zUI3nWevCsdlSBnw0nRvWTwVw4LYn8NnuuGNIE9OBzniOLx9kCV1qj5newOMy2rFeKOUpez/e0mkmoAD4zzCGc=,iv:LdKtVaYp0eXBBR62Ad06duc5U5MzZ9N82hy0iuegErY=,tag:B6BW1N9uqq5MU2Ml8g4Zew==,type:str]
     unencrypted_suffix: _unencrypted
     version: 3.13.0
